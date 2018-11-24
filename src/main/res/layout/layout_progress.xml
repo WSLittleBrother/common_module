@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/x32">
+
+        <LinearLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前项目："
+                android:textColor="@color/text_color_darkgray"
+                android:textSize="@dimen/x38" />
+
+            <TextView
+                android:id="@+id/mainTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="4"
+                android:text="0"
+                android:textColor="@color/navigation_bg"
+                android:textSize="@dimen/x38"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mainCntTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/navigation_bg"
+                android:textSize="@dimen/x38" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/mainPb"
+            android:layout_width="match_parent"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainContainer"
+            android:layout_marginTop="@dimen/x20" />
+
+        <LinearLayout
+            android:id="@+id/secondContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainPb"
+            android:layout_marginTop="@dimen/x20"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/secondTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前附件："
+                android:textColor="@color/text_color_darkgray"
+                android:textSize="@dimen/x38" />
+
+            <TextView
+                android:id="@+id/secondTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="4"
+                android:text=""
+                android:textColor="@color/navigation_bg"
+                android:textSize="@dimen/x38"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/secondCntTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/navigation_bg"
+                android:textSize="@dimen/x38" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/secondPb"
+            android:layout_width="match_parent"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondContainer"
+            android:layout_marginTop="@dimen/x20" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

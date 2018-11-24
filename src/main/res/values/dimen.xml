@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="divider_size">0.5dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_75">75dp</dimen>
+
+
+    <!-- 界面所有文字的尺寸 -->
+    <dimen name="sfont">@dimen/x24</dimen>
+    <dimen name="mfont">@dimen/x28</dimen>
+    <dimen name="xfont">@dimen/x32</dimen>
+    <dimen name="xxfont">@dimen/x36</dimen>
+    <dimen name="xxxfont">@dimen/x42</dimen>
+    <dimen name="lfont">@dimen/x48</dimen>
+    <dimen name="xlfont">@dimen/x64</dimen>
+    <dimen name="xxlfont">@dimen/x72</dimen>
+
+
+    <!-- font -->
+    <dimen name="font_tiny">10sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_normal2">16sp</dimen>
+    <dimen name="font_normal3">18sp</dimen>
+    <dimen name="font_normal4">20sp</dimen>
+    <dimen name="font_large">24sp</dimen>
+    <dimen name="font_big1">54sp</dimen>
+
+</resources>

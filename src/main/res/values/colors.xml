@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!--漩涡式加载动画的颜色-->
+    <color name="material_red">#FF4081</color>
+    <color name="material_green">#40FF81</color>
+    <color name="material_blue">#4081FF</color>
+
+    <color name="transparent">#00000000</color>
+    <!--通用背景色-->
+    <color name="common_bg">#fff7f7f7</color>
+    <!--通用一级标题的颜色-->
+    <color name="common_h1">#212121</color>
+    <!--通用二级标题的颜色-->
+    <color name="common_h2">#727272</color>
+    <!--通用三级标题的颜色-->
+    <color name="common_h3">#B2B2B2</color>
+    <!--通用textvew的颜色-->
+    <color name="common_h">#333333</color>
+    <!--通用分割线细-->
+    <color name="common_divider_narrow">#E3E3E3</color>
+
+    <item name="greay_bg" type="color">#5e5e5e</item>
+    <item name="greay_dark_bg" type="color">#bebebe</item>
+    <item name="editable_editview_orderdetail" type="color">#1E90FF</item>
+
+    <!-- 应用首选字体颜色 -->
+    <color name="text_color_darkgray">#626C83</color>
+    <color name="text_color_lightgray">#888888</color>
+    <color name="text_color_lightblack">#55000000</color>
+    <color name="color_d4d6dc">#d4d6dc</color>
+    <color name="statusbar_bg">#1b72d7</color>
+    <color name="navigation_bg">#1c7cec</color>
+
+    <!--通用背景颜色-->
+    <color name="common_bg_color">#E3E3E3</color>
+    <!--通用点击背景颜色-->
+    <color name="common_click_bg_color">#B2B2B2</color>
+    <item name="main_menu_greay" type="color">#888888</item>
+
+</resources>

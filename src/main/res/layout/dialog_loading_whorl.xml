@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/corner_white_bg"
+    android:padding="@dimen/dp_10"
+    >
+
+        <com.sunwayworld.ui.widget.WhorlView
+            android:id="@+id/whorl"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:WhorlView_BigWhorlColor="@color/material_blue"
+            app:WhorlView_CircleSpeed="270"
+            app:WhorlView_MiddleWhorlColor="@color/material_red"
+            app:WhorlView_Parallax="fast"
+            app:WhorlView_SmallWhorlColor="@color/material_green"
+            app:WhorlView_StrokeWidth="8"
+            app:WhorlView_SweepAngle="180"
+            app:WhorlView_DefaultStartAnim="true"
+            />
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_below="@+id/whorl"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:minEms="6"
+        android:text="加载中..."
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:paddingTop="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

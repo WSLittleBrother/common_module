@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--漩涡式加载动画-->
+    <declare-styleable name="WhorlView_Style">
+        <attr name="WhorlView_SmallWhorlColor" format="color" />
+        <attr name="WhorlView_MiddleWhorlColor" format="color" />
+        <attr name="WhorlView_BigWhorlColor" format="color" />
+        <attr name="WhorlView_CircleSpeed" format="integer" />
+        <attr name="WhorlView_Parallax">
+            <enum name="fast" value="1" />
+            <enum name="medium" value="0" />
+            <enum name="slow" value="2" />
+        </attr>
+        <attr name="WhorlView_SweepAngle" format="float" />
+        <attr name="WhorlView_StrokeWidth" format="float" />
+        <attr name="WhorlView_DefaultStartAnim" format="boolean" />
+    </declare-styleable>
+
+    <!--滑动删除的布局-->
+    <declare-styleable name="EasySwipeMenuLayout">
+        <attr name="leftMenuView" format="reference" />
+        <attr name="rightMenuView" format="reference" />
+        <attr name="contentView" format="reference" />
+        <attr name="canRightSwipe" format="boolean" />
+        <attr name="canLeftSwipe" format="boolean" />
+        <attr name="fraction" format="float" />
+    </declare-styleable>
+
+    <!--自定义的多功能控件-->
+    <declare-styleable name="DropEditText">
+        <attr name="dropSrc" format="reference" />
+        <attr name="dropMode" format="boolean" />
+        <attr name="dropWidth" format="dimension" />
+        <attr name="et_hint" format="string|reference" />
+        <attr name="et_background" format="reference|color" />
+        <attr name="et_enable" format="boolean" />
+        <attr name="et_focusable" format="boolean" />
+        <attr name="tv_text" format="string|reference" />
+        <attr name="tv_color" format="color|reference" />
+        <attr name="tv_visible" format="boolean" />
+        <attr name="tv_textSize" format="dimension"/>
+        <attr name="et_textSize" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+    </declare-styleable>
+
+    <!--水波纹动画背景-->
+    <declare-styleable name="RadarWaveView">
+        <attr name="waveColor" format="color" />
+        <attr name="waveAmplitude" format="dimension" />
+        <attr name="waveSpeed" format="float" />
+        <attr name="waveStartPeriod" format="float" />
+        <attr name="waveStart" format="boolean" />
+        <attr name="waveFillTop" format="boolean" />
+        <attr name="waveFillBottom" format="boolean" />
+        <attr name="waveFillType" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+        </attr>
+        <attr name="waveType" format="enum">
+            <enum name="sin" value="0" />
+            <enum name="cos" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

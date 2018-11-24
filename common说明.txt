@@ -1,0 +1,93 @@
+新建项目的说明：
+
+1.所有的第三方依赖都放在config.gradle配置，采用api的方式
+2.在项目的build.gradle中添加config.gradle,添加方式如下：
+        eg:
+        buildscript {
+            apply from: "config.gradle"
+            repositories {
+                google()
+                jcenter()
+            }
+            ....
+            }
+3.所有的应用权限都在此module的AndroidManifest.xml进行申明
+4.所有的业务module的都需要添加此common_module依赖
+5.所有的业务module的Application必须继承自BaseApplication
+6.项目采用ARouter进行跳转，所以所有有被跳转页面的module要注意一下三点
+        (1).在defaultConfig添加一下代码：
+            eg:
+            defaultConfig {
+                    //这里采用的是api添加是所有的module统一
+                    applicationId "com.sunwayworld.module.modularization"
+                    minSdkVersion rootProject.ext.android.minSdkVersion
+                    targetSdkVersion rootProject.ext.android.targetSdkVersion
+                    versionCode rootProject.ext.android.versionCode
+                    versionName rootProject.ext.android.versionName
+                    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+                    //ARouter（这里是需要添加的代码，否则Router不能正常使用）
+                    javaCompileOptions {
+                        annotationProcessorOptions {
+                            arguments = [moduleName: project.getName()]
+                        }
+                    }
+                }
+
+        (2).在dependencies添加以下代码
+            eg:
+             dependencies {
+                 implementation fileTree(include: ['*.jar'], dir: 'libs')
+                 //这一行是添加的代码，否者Router不能正常使用
+                 annotationProcessor rootProject.ext.dependencies.arouter_compiler
+                 implementation rootProject.ext.dependencies.multidex
+                 implementation project(':common_module')
+             }
+
+        (3).在当前module中的Application中进行注册
+            eg:
+            ARouter.init(this);
+        (4).在所有的被调整页面的Avtivity上面添加路径：@Route(path= "/login/activity")
+        eg：
+        //添加路径
+        @Route(path= "/login/activity")
+           public class SecondActivity extends AppCompatActivity {
+           .......
+           }
+        //跳转代码
+        ARouter.getInstance().build("/login/activity").navigation();
+        **************************************************************
+        Router其他用法:https://blog.csdn.net/weixin_37940567/article/details/79683398
+
+7.如果将不同的module都单独打包作为一个项目运行，可以查看：https://mp.weixin.qq.com/s/LXqPpoePcFOkB9bCdQuoKw，
+8.使用Router时自带有崩溃重启，所以不需要手动去处理崩溃跳转到首页的操作
+
+
+*******************************分割线(有关BaseListActivity和BaseListFragment使用的注意点)*********************************************************
+1.在被继承的Activity或者Fragment的super.onCreate(savedInstanceState);之前去控制是否要模拟点击第一项
+        eg:
+        @Override
+            protected void onCreate(Bundle savedInstanceState) {
+                setPerformClick(true);
+                super.onCreate(savedInstanceState);
+               ...
+            }
+2.通过调用mBaseRecyclerViewAdapter.setMarkClickItem(true)来控制每次点击item的时候是否要标记当前item的背景色
+3.Fragment直接继承BaseListFragment即可，Activity会采用抽象方法getLayoutId(R.layout.activiy_layout)获取布局，所以要将原来的setContentView方法去掉
+
+*******************************分割线(有关LoadingDialog的使用)*********************************************************
+1.根据加载动画的位置不同分为LoadingVerticalDialog(竖直方向)、LoadingHorizontalDialog(水平方向)
+2.设置动画的颜色的时候必须使用十六进制，并且必须是八位，否则设置颜色回无效，eg:0xFF000000(黑色)
+3.设置Dialog背景的时候必须引用资源文件，因为直接设置颜色会导致背景是方形没有圆角，所以需要自己编写一个shape
+4.LoadingWhorlDialog和LoadingVerticalDialog相似，区别在于动画方式不同
+
+
+*******************************分割线(自定义布局)*********************************************************
+1.ReboundScrollView---------------仿ios下拉和上拉的弹性效果
+2.DrawableIconClickTextView-------可点击drawableRight图标的TextView
+3.DrawableIconClickEditText-------可点击drawableRight图标的EditText
+4.MarqueeTextView-----------------跑马灯效果的TextView
+5.WaveViewBySinCos----------------正弦波形图布局
+6.BottomNavigationViewHelper------BottomNavigationView辅助类，用于当item的个数超过3个后也显示图标+文字
+        eg: //让底部菜单栏直接显示
+            BottomNavigationViewHelper.disableShiftMode(mBottomNavigationView);

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 选中未up时 -->
+    <item android:state_pressed="false"><shape>
+            <solid android:color="@color/color_d4d6dc" />
+
+            <corners android:bottomLeftRadius="@dimen/x100" android:bottomRightRadius="@dimen/x100" android:topLeftRadius="@dimen/x100" android:topRightRadius="@dimen/x100" />
+        </shape></item>
+
+    <!-- 选中未up时 -->
+    <item android:state_pressed="true"><shape>
+            <solid android:color="@color/color_d4d6dc" />
+
+            <corners android:bottomLeftRadius="@dimen/x100" android:bottomRightRadius="@dimen/x100" android:topLeftRadius="@dimen/x100" android:topRightRadius="@dimen/x100" />
+        </shape></item>
+
+</selector>

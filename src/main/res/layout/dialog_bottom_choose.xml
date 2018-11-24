@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingRight="@dimen/dp_20"
+    >
+
+    <TextView
+        android:id="@+id/tip"
+        android:textSize="@dimen/font_normal"
+        style="@style/item_bottom_dialog_style"
+        android:background="@drawable/selector_corner_ispressed_2"
+        android:textColor="@color/common_h"
+        android:text="请选择照片"
+        />
+    <TextView
+        android:id="@+id/tv_up"
+        style="@style/item_bottom_dialog_style"
+        android:background="@drawable/selector_corner_ispressed_3"
+        android:text="相机"
+        />
+    <TextView
+        android:id="@+id/tv_down"
+        style="@style/item_bottom_dialog_style"
+        android:background="@drawable/selector_corner_ispressed_4"
+        android:text="相册"
+        />
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/cancel"
+        style="@style/item_bottom_dialog_style"
+        android:background="@drawable/selector_corner_ispressed_1"
+        android:text="取消"
+        />
+
+</LinearLayout>
